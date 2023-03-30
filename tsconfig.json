@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "react",
+    "jsxFactory": "CustomElements.createElement",
+    "jsxFragmentFactory": "CustomElements.Fragment",
+    // "jsxImportSource": "src/jsx",
+    // "reactNamespace": "CustomElements",
+
+    "useDefineForClassFields": true,
+
+    "module": "esnext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"]
+    },
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules"]
+}

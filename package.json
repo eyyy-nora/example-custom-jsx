@@ -1,0 +1,23 @@
+{
+  "name": "example-custom-jsx",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Nora Reichwald <nora@reichwald.me> (https://reichwald.me/)",
+  "license": "MIT",
+  "url": "https://reichwald.me/",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "tslib": "^2.5.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  }
+}
