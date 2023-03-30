@@ -1,0 +1,5 @@
+{
+  "presets": [
+    ["@bable/preset-react", { "runtime": "automatic" }]
+  ]
+}

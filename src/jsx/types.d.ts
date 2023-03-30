@@ -9,7 +9,12 @@ export declare namespace JSX {
   /**
    * All properties of an element, including children
    */
-  export type PropsOf<T extends Element> = T extends keyof IntrinsicElements ? IntrinsicElements<T> : Parameters<T>[0];
+  export type PropsOf<T extends Element> =
+    T extends keyof IntrinsicElements
+      ? IntrinsicElements[T]
+      : T extends ElementFn
+        ? Parameters<T>[0]
+        : never;
   /**
    * Children of an element
    */
@@ -33,7 +38,7 @@ export declare namespace JSX {
 
   /**
    * All built-in element types. think html tags for default react behaviour.
-   * @remarks must be lowercase!
+   * @remarks all members must be lowercase!
    */
   export interface IntrinsicElements {
     foo: FooProps;
