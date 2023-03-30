@@ -11,7 +11,7 @@ function MyCustomComponent({
   children?: JSX.Element[]
 }) {
   return <>
-    <bar bar={optionalProp}>
+    <bar bar={5}>
       <foo foo={requiredProp + " nested"} />
     </bar>
     <foo foo={requiredProp} />
@@ -20,12 +20,12 @@ function MyCustomComponent({
 }
 
 export function test() {
-  return <logme fn={tree => console.log(JSON.stringify(tree, null, 2))}>
-    <MyCustomComponent requiredProp={"hello world"}>
+  return <log fn={tree => console.log(JSON.stringify(tree, null, 2))}>
+    <MyCustomComponent requiredProp="hello world">
       <foo foo="test" />
     </MyCustomComponent>
     {
       range(10).map((_, index) => <bar bar={index} />)
     }
-  </logme>
+  </log>
 }
